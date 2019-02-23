@@ -8,6 +8,7 @@ import FlightsList from "./components/FlightsList";
 interface IState {
   from: string;
   to: string;
+  date: string;
 }
 
 class App extends Component<{}, IState> {
@@ -16,6 +17,7 @@ class App extends Component<{}, IState> {
     this.state = {
       from: "",
       to: "",
+      date: "",
     };
   }
 
@@ -23,6 +25,7 @@ class App extends Component<{}, IState> {
     this.setState({
       from,
       to,
+      date,
     });
   };
 
@@ -33,7 +36,7 @@ class App extends Component<{}, IState> {
         <FlightsList
           from={this.state.from}
           to={this.state.to}
-          date="2019-02-16"
+          date={this.state.date}
         />
       </div>
     );
